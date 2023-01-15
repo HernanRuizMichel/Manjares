@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.header{
+    width: 100%;
+    height: 90px;
+    position: relative;
+    z-index: 9;
+}
+
+.header__nav{
+    width: 100%;
+    height: auto;
+    background-color: var(--secundaryColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border-bottom: 1px solid #5c5c5c; */
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+    padding-right: 20px;
+}
+
+.nav__ul {
+    display: flex;
+    width: 50%;
+    height: fit-content;
+    padding: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__ul li {
+    font-family: var(--secundaryFont);
+    font-size: 1.5rem;
+    font-weight: bold;
+    list-style: none;
+    padding-top: 5px;
+}
+
+.nav__ul li a:hover {
+    color: var(--primaryColor);
+}
+
+.nav__ul li a {
+    text-decoration: none;
+    color: #101010;
+}
+
+.nav--logo {
+    width: 70px;
+    background-color: var(--secundaryColor);
+    overflow: hidden;
+}
+
+
+.logo__nav{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.nav--redes__sociales{
+    width: 30%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav--redes__sociales span {
+    width: 40px;
+    height: auto;
+}
+
+.nav--redes__sociales span a {
+    width: 100%;
+    height: auto;
+}
+
+.nav--redes__sociales span a img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Menu Hambuerguesa */
+
+.menu__bar{
+    display: none;
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+    /* justify-self: flex-end; */
+}
+
+.menu__bar span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--primaryColor);
+    margin-top: 2px;
+    transition: all 300ms;
+    transform-origin:0px;
+}
+
+.activateline1__menu--bar{
+    transform: rotate(45deg) translateY(-4px);
+}
+.activateline2__menu--bar{
+    transform: translate(-30px);
+    opacity: 0;
+}
+.activateline3__menu--bar{
+    transform: rotate(-45deg) translateY(4px);
+}
+
+/* Menu Hambuerguesa */
+
+/* Links Menu Hambuerguesa */
+
+.lista__menu{
+    display: none;
+    position: fixed;
+    width: 70vw;
+    height:calc(100vh - 90px);;
+    top: 90px;
+    right: -70vw;
+    background-color: var(--secundaryColor);
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: all 300ms;
+    z-index: 10;
+}
+.activatelista__menu{
+    transform: translateX(-70vw);
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    height: 45%;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu__links li a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: var(--secundaryFont);
+    font-weight: 500;
+    color: #101010;
+}
+
+.menu__links li a:hover{
+    color: var(--primaryColor);
+}
+
+/* Links Menu Hambuerguesa */
+
+/* Redes Sociales */
+
+.redes__sociales{
+    width: 70%;
+    height: 55%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.redes__sociales span {
+    width: 40px;
+    height: auto;
+}
+
+.redes__sociales span a {
+    width: 100%;
+    height: auto;
+}
+
+.redes__sociales span a img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Redes Sociales */
+
+
+
+@media (max-width:800px) {
+    .nav__lista {
+        display: none;
+    }
+
+    .menu__bar{
+        display: block;
+    }
+
+    .lista__menu{
+        display: block;
+    }
+
+    .nav--redes__sociales{
+        display: none;
+    }
+}

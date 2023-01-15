@@ -1,0 +1,250 @@
+.main {
+    width: 100%;
+    height: calc(100vh - 90px);
+    position: relative;
+    background-color: white;
+    z-index: 1;
+}
+.grid--container{
+    display: grid;
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    grid-template-columns: 35vw 65vw;
+    grid-template-rows: repeat(2, calc(50vh - 80px));
+    grid-auto-rows: auto;
+    grid-template-areas: 
+                        "gradient newProduct1"
+                        "gradient newProduct2"
+    ;
+}
+.grid--gradient{
+    width: 95%;
+    height: auto;
+    grid-area: gradient;
+    background-image: radial-gradient(circle, #fd9f00, #fb9f25, #f99e38, #f69f47, #f29f55);
+    box-shadow: 0px 0px 2.6px 2.6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-top: 60px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+}
+
+.grid--gradient img{
+    width: 40%;
+}
+
+.gradient--botones{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gradient--botones a{
+    width: 35%;
+    min-width: 150px;
+    max-width: 200px;
+    height: auto;
+    font-family: var(--primaryFont);
+    font-size: 1.7rem;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 9px 13px;
+    text-align: center;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #e9e9e9;
+    margin-right: 15px;
+    margin-left: 15px;
+    border: #e9e9e9 solid 1px;
+    margin-bottom: 10px;
+}
+
+.gradient--botones a:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.grid--newProduct{
+    width: 97%;
+    height: auto;
+    min-height: fit-content;
+    /* max-height: calc(100vh - 90px); */
+    box-shadow: 0px 0px 2.6px 2.6px rgba(0, 0, 0, 0.2);
+    justify-self: left;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 5px;
+}
+#product1{
+    grid-area: newProduct1;
+}
+
+#product2{
+    grid-area: newProduct2;
+}
+
+.newProduct--picture{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    }
+
+.newProduct--picture img {
+    width: 39%;
+    height: auto;
+    max-height: 32vh;
+    margin-right: 5px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.newProduct--picture figcaption{
+    width: calc(60% - 5px);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.newProduct--picture figcaption h2{
+    font-size: 1.9rem;
+    font-family: var(--primaryFont);
+    font-weight: 800;
+    color: var(--primaryColor);
+    text-align: center;
+    padding-top: 15px;
+}
+.newProduct--picture figcaption p{
+    font-size: 1.3vw;
+    font-family: var(--secundaryFont);
+    line-height: 2.7rem;
+    font-weight: 500;
+    color: #101010;
+    text-align: justify;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.newProduct--picture figcaption a{
+    width: 25%;
+    min-width: fit-content;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-family: var(--primaryFont);
+    font-weight: 600;
+    background-color: var(--secundaryColor);
+    color: var(--primaryColor);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    margin-top: 30px;
+    align-self: flex-end;
+    margin-right: 14px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.newProduct--picture figcaption a:hover{
+    background-color: var(--primaryColor);
+    color: var(--secundaryColor);
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+    border:1px solid #ccc ;
+}
+
+@media (max-width:900px){
+    .newProduct--picture figcaption p{
+        font-size: 1.6vw;
+    }
+    .newProduct--picture figcaption h2{
+        font-size: 1.9vw;
+    }
+    .newProduct--picture figcaption a{
+        font-size: 1.9vw;
+    }
+}
+
+@media (max-width:800px) {
+    .grid--container{
+        height: fit-content;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "gradient"
+                             "newProduct1"
+                             "newProduct2";
+    }
+    .gradient--botones{
+        height: auto;
+        top: calc(55vh + 90px);
+        margin-top: 20px;
+    }
+    .gradient--botones a {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+    .grid--gradient{
+        width: 90%;
+        max-width: 600px;
+        min-width: 252px;
+        height: fit-content;
+        max-height: 100vh;
+        margin: 0 auto;
+        margin-top: 5px;
+        padding-right: 10px;
+        border-radius: 10px;
+    }
+    .grid--gradient img {
+        width: 33%;
+        max-width: 300px;
+    }
+
+    .grid--newProduct{
+        width: 90%;
+        max-width: 600px;
+        min-width: 252px;
+        height: fit-content;
+        justify-self: center;
+        padding-top: 20px; 
+    }
+
+    .grid--newProduct img{
+        width: 80%;
+        height: 30vh;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
+    .grid--newProduct figcaption{
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .grid--newProduct figcaption h2{
+        font-size: 1.6rem;
+    }
+    .grid--newProduct figcaption p {
+        font-size: 1.5rem;
+        padding-top: 10px;
+    }
+
+    .grid--newProduct figcaption a {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+}
