@@ -78,6 +78,9 @@
     width: 97%;
     height: auto;
     min-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* max-height: calc(100vh - 90px); */
     box-shadow: 0px 0px 2.6px 2.6px rgba(0, 0, 0, 0.2);
     justify-self: left;
@@ -100,11 +103,14 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px;
+    justify-content: space-around;
+    padding-left: 3%;
     }
 
 .newProduct--picture img {
-    width: 39%;
+    width: auto;
     height: auto;
+    min-width: 24%;
     max-height: 32vh;
     margin-right: 5px;
     object-fit: cover;
@@ -116,6 +122,7 @@
     width: calc(60% - 5px);
     height: fit-content;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: space-around;
 }
@@ -228,6 +235,9 @@
         height: 30vh;
         margin: 0 auto;
         object-fit: cover;
+    }
+    .grid--newProduct picture{
+        padding-left: 0;
     }
 
     .grid--newProduct figcaption{
